@@ -18,9 +18,10 @@ class CreateRecieversTable extends Migration
             $table->string('name');
             $table->string('blood_groop');
             $table->float('phone',15,0);
-            $table->string('email')->unique();
+            $table->string('email');
             $table->integer('age');
             $table->integer('amount');
+            $table->string('gender');
             $table->timestamps();
         });
     }

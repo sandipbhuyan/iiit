@@ -17,7 +17,7 @@ class CreateDonatesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('blood_group');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->float('phone',15,0);
             $table->text('address');
             $table->integer('weight');

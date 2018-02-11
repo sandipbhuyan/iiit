@@ -20,6 +20,7 @@ class CreateAppointmentsTable extends Migration
             $table->integer('place_id')->references('id')->on('places');
             $table->integer('loc_id')->references('id')->on('locations');
             $table->float('date');
+            $table->string('reference')->unique();
             $table->timestamps();
         });
     }
