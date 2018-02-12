@@ -3,7 +3,7 @@
 @section('content')
 <form class="form-donation" action="{{url('/api/reciver-register')}}" method="post">
   {{ csrf_field() }}
-    <h3 class="title-style-1 text-center">Thank you for your donation <span class="title-under"></span>  </h3>
+    <h3 class="title-style-1 text-center">Get Blood<span class="title-under"></span>  </h3>
     <div class="row">
         <div class="form-group col-md-12 ">
             <input type="text" class="form-control" id="amount" name="name" placeholder="Name" ng-model="name">
