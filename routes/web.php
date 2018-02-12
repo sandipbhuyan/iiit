@@ -18,6 +18,9 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 
+Route::get('/register-blood',function(){
+  return view('donate');
+});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -369,7 +369,7 @@ a:hover, a:focus, a:active {
 }
 
 .footer-bottom {
-  background: rgba(248, 11, 27, 0.8);
+  background: rgba(225, 204, 252, 0.8);
   padding: 3px;
 }
 
@@ -511,10 +511,10 @@ form .alert {
 }
 
 .btn-secondary {
-  background: #fff;
-  color: #000;
-  border-radius: 0;
-      margin-top: 5px;
+  background: #f6414c;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 .btn-secondary:hover {
   background: #f80c2e;
