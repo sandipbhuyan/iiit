@@ -283,11 +283,12 @@
                 <h4 class="modal-title" id="donateModalLabel">GET BLOOD</h4>
             </div>
             <div class="modal-body">
-                <form class="form-donation">
+                <form class="form-donation" action="{{url('/api/get-blood-details')}}" method="post">
+                  {{ csrf_field() }}
                     <h3 class="title-style-1 text-center"> <span class="title-under">Enter Your blood group</span>  </h3>
                     <div class="row">
                         <div class="form-group col-md-8 col-md-offset-2 ">
-                            <select class="selectpicker" name="blood-group">
+                            <select class="selectpicker" name="blood_groop">
                                 <option value="O+">O+</option>
                                 <option value="O-">O-</option>
                                 <option value="A+">A+</option>

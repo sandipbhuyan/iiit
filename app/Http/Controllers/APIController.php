@@ -90,9 +90,14 @@ class APIController extends Controller
         return $loc;
     }
 
-    public function getBloodDetails($type){
-      $details = Blood::where('blood_groop',$type)->get();
+    public function getBloodDetails(Request $request){
+      $details = Blood::where('blood_groop',$request->blood_groop)->get();
+      return view('recieve.details',['details'=> $details]);
+    }
 
-      return $details;
+    public function getBlood($id) {
+      $details = Blood::find($id);
+
+      return true;
     }
 }
