@@ -46,6 +46,7 @@
                     <ul class="nav navbar-nav">
                       <li><a class="" href="{{url('/')}}">HOME</a></li>
                       <li><a href="{{url('/gallery')}}">GALLERY</a></li>
+                      <li><a href="{{url('/about')}}">ABOUT</a></li>
                     </ul>
                   </div> <!-- /#navbar -->
                 </div> <!-- /.container -->
