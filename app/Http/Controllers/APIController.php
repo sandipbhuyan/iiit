@@ -9,10 +9,28 @@ use App\Place;
 use App\Blood;
 use Illuminate\Support\Facades\Mail;
 use DB;
+use Validator;
 
 class APIController extends Controller
 {
     public function donateBlood(Request $request){
+      $validator = Validator::make($request->all(), [
+          'name' => 'required',
+          'blood_group' => 'required',
+          'email' => 'required',
+          'phone' => 'required|integer',
+          'address' => 'required',
+          'weight' => 'required|integer',
+          'age' => 'required|integer',
+          'gender' => 'required',
+          'date' => 'required'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/register-blood')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
         $id = DB::table('donates')->insertGetId([
             'name' =>  $request->name,
             'blood_group' => $request->blood_group,
@@ -64,6 +82,23 @@ class APIController extends Controller
      }
 
     public function recieveBlood(Request $request){
+      $validator = Validator::make($request->all(), [
+          'name' => 'required',
+          'blood_group' => 'required',
+          'email' => 'required',
+          'phone' => 'required|integer',
+          'weight' => 'required|integer',
+          'age' => 'required|integer',
+          'gender' => 'required',
+          'date' => 'required',
+          'amount' => 'required|number'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/recieve-details')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
         $id = DB::table('recievers')->insertGetId([
             'name' =>  $request->name,
             'blood_groop' => $request->blood_group,

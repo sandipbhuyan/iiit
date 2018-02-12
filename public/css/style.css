@@ -237,7 +237,7 @@ a:hover, a:focus, a:active {
   padding: 25px;
   color: #fff;
   text-align: justify;
-  background: rgba(248, 11, 27, 0.8);
+  background: rgba(11, 248, 171, 0.8);
   border-bottom: 1px solid #fff;
   visibility: hidden;
   opacity: 0;
@@ -1059,4 +1059,9 @@ form .alert {
 
 header.main-header {
     margin-bottom: 25px;
+}
+.gallery {
+  height: 250px;
+  margin-bottom: 10px
+
 }

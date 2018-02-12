@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="reasons-col animate-onscroll fadeIn">
+                <div class="reasons-col fadeIn">
                     <img src="{{url('images/blood-1.jpg')}}" alt="">
                     <div class="on-hover hidden-xs">
                         <p> The blood is red gold in time of saving a life.</p>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="reasons-col animate-onscroll fadeIn">
+                <div class="reasons-col fadeIn">
                     <img src="{{url('images/blood-2.jpg')}}" alt="">
                     <div class="on-hover hidden-xs">
                         <p> To the young and healthy it’s no loss. To sick it’s hope of life. Donate Blood to give back life.</p>
@@ -25,6 +25,7 @@
                 </div>
             </div>
         </div>
+
         <br>
     </div>
 </div> <!-- /.home-reasons -->

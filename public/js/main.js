@@ -1,21 +1,18 @@
-		
+
 $(function(){
 
 
 	/*  Gallery lightBox
- 	================================================*/ 
+ 	================================================*/
 
  	if( $(".lightbox").length > 0 ) {
 
 		$(".lightbox").prettyPhoto();
-		
+
 	}
 
 	/*  Owl carousel
- 	================================================*/ 
-
- 	if( $(".owl-carousel").length > 0 ) {
-
+ 	================================================*/
 		$(".owl-carousel").owlCarousel({
 
 			 margin:25,
@@ -38,7 +35,7 @@ $(function(){
 		    }
 
 		});
-	}
+
 
 
 	 /* Contact form ajax Handler
@@ -62,7 +59,7 @@ $(function(){
                     form.find(".alert").fadeOut();
                     form.find(".alert-success").html(data.message);
                     form.find(".alert-success").fadeIn(600);
-                    
+
 
                 }else{
 
@@ -73,13 +70,13 @@ $(function(){
                 }
             },
 
-            error: function(jqXHR, textStatus, errorThrown)  { 
-                
+            error: function(jqXHR, textStatus, errorThrown)  {
+
                 console.log(errorThrown);
             }
 
         });
-            
+
 
         return false;
      })
@@ -96,7 +93,7 @@ $(function(){
 
     var winheight = $(window).height();
     var fullheight = $(document).height();
- 
+
     $(window).scroll(function(){
         animate_elems();
     });
@@ -106,16 +103,16 @@ $(function(){
     function animate_elems() {
 
 	    wintop = $(window).scrollTop(); // calculate distance from top of window
-	 
+
 	    // loop through each item to check when it animates
 	    $elems.each(function(){
-	    	
+
 	      $elm = $(this);
-	 
+
 	      if($elm.hasClass('animated')) { return true; } // if already animated skip to the next item
-	 
+
 	      topcoords = $elm.offset().top; // element's distance from top of page in pixels
-	 
+
 	      if(wintop > (topcoords - (winheight*.75))) {
 	        // animate when top of the window is 3/4 above the element
 	        $elm.addClass('animated');
@@ -125,14 +122,10 @@ $(function(){
 
 	  } // end animate_elems()
 
-	
+
 
 
  	/*  Google map Script
- 	====================================================*/ 
+ 	====================================================*/
 
 });
-
-
-
-		

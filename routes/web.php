@@ -18,6 +18,9 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 
+Route::get('/recieve-details', function () {
+    return view('recieve.register');
+});
 Route::get('/register-blood',function(){
   return view('donate');
 });

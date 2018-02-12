@@ -166,10 +166,9 @@
 <!-- owl carouseljavascript file -->
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <!-- Template main javascript -->
-<script src="{{asset('js/main.js')}}"></script>
-<script src="{{asset('js/angular.min.js')}}"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{asset('js/main.js')}}"></script>
 <script>
     $( function() {
         $( "#datepicker" ).datepicker();

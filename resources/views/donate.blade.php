@@ -7,6 +7,11 @@
     <div class="row">
         <div class="form-group col-md-12 ">
             <input type="text" class="form-control" id="amount" name="name" placeholder="Name" ng-model="name">
+            @if ($errors->has('name'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('name') }}</strong>
+                </span>
+            @endif
         </div>
     </div>
     <div class="row">
@@ -22,14 +27,29 @@
                 <option value="AB+">AB+</option>
                 <option value="AB-">AB-</option>
             </select>
+            @if ($errors->has('blood_group'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('blood_group') }}</strong>
+                </span>
+            @endif
         </div>
         <div class="form-group col-md-6 ">
             <input type="text" class="form-control" name="date" placeholder="Date" id="datepicker" ng-model="date">
+            @if ($errors->has('date'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('date') }}</strong>
+                </span>
+            @endif
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <input type="text" class="form-control" name="email" placeholder="Email*" ng-model="email">
+            @if ($errors->has('email'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+            @endif
         </div>
         <div class="form-group col-md-6">
             <input type="text" class="form-control" name="phone" placeholder="Phone" ng-model="phn">
@@ -38,14 +58,29 @@
     <div class="row">
         <div class="form-group col-md-12">
             <input type="text" class="form-control" name="address" placeholder="Address" ng-model="addr">
+            @if ($errors->has('address'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('address') }}</strong>
+                </span>
+            @endif
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <input type="text" class="form-control" name="age" placeholder="Age" ng-model="age">
+            @if ($errors->has('age'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('age') }}</strong>
+                </span>
+            @endif
         </div>
         <div class="form-group col-md-6">
             <input type="text" class="form-control" name="weight" placeholder="Weight(In kg)" ng-model="weight">
+            @if ($errors->has('weight'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('weight') }}</strong>
+                </span>
+            @endif
         </div>
     </div>
     <div class="row">
@@ -55,6 +90,11 @@
               <option value="M">Male</option>
               <option value="F">Female</option>
           </select>
+          @if ($errors->has('gender'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('gender') }}</strong>
+              </span>
+          @endif
       </div>
         <div class="form-group col-md-6">
             <button type="submit" class="btn btn-primary pull-right" name="donateNow" ng-click="donateBlood()">DONATE NOW</button>

@@ -4,9 +4,9 @@
 <div class="main-container">
   <div class="container gallery fadeIn animated">
     <div class="row">
-      @for($var = 0;$var < 16; $var++)
-        <a href="{{url('/images/550x280.png')}}" class="col-md-3 col-sm-4 gallery-item lightbox">
-          <img src="{{url('/images/550x280.png')}}" alt="">
+      @for($var = 1;$var < 13; $var++)
+        <a href="{{url('/images/gallery/'.$var.'.jpg')}}" class="col-md-3 col-sm-4 gallery-item lightbox">
+          <img src="{{url('/images/gallery/'.$var.'.jpg')}}" alt="" class="gallery">
           <span class="on-hover">
             <span class="hover-caption">Captions</span>
           </span>

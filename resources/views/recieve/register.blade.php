@@ -7,30 +7,65 @@
     <div class="row">
         <div class="form-group col-md-12 ">
             <input type="text" class="form-control" id="amount" name="name" placeholder="Name" ng-model="name">
+            @if ($errors->has('name'))
+                <span class="help-block danger">
+                    <strong>{{ $errors->first('name') }}</strong>
+                </span>
+            @endif
         </div>
     </div>
     <div class="row">
       <div class="form-group col-md-6">
           <input type="text" class="form-control" name="email" placeholder="Email*" ng-model="email">
+          @if ($errors->has('email'))
+              <span class="help-block danger">
+                  <strong>{{ $errors->first('email') }}</strong>
+              </span>
+          @endif
       </div>
         <div class="form-group col-md-6 ">
             <input type="text" class="form-control" name="date" placeholder="Date" id="datepicker" ng-model="date">
+            @if ($errors->has('date'))
+                <span class="help-block danger">
+                    <strong>{{ $errors->first('date') }}</strong>
+                </span>
+            @endif
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
             <input type="text" class="form-control" name="weight" placeholder="Weight(In kg)" ng-model="weight">
+            @if ($errors->has('weight'))
+                <span class="help-block danger">
+                    <strong>{{ $errors->first('weight') }}</strong>
+                </span>
+            @endif
         </div>
         <div class="form-group col-md-6">
             <input type="text" class="form-control" name="phone" placeholder="Phone" ng-model="phn">
+            @if ($errors->has('phone'))
+                <span class="help-block danger">
+                    <strong>{{ $errors->first('phone') }}</strong>
+                </span>
+            @endif
         </div>
     </div>
     <div class="row">
       <div class="form-group col-md-6">
           <input type="text" class="form-control" name="age" placeholder="Age" ng-model="age">
+          @if ($errors->has('age'))
+              <span class="help-block danger">
+                  <strong>{{ $errors->first('age') }}</strong>
+              </span>
+          @endif
       </div>
       <div class="form-group col-md-6">
           <input type="text" class="form-control" name="amount" placeholder="Amount" ng-model="age">
+          @if ($errors->has('amount'))
+              <span class="help-block danger">
+                  <strong>{{ $errors->first('amount') }}</strong>
+              </span>
+          @endif
       </div>
     </div>
     <div class="row">
