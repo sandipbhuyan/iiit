@@ -74,8 +74,8 @@
               <img src="{{url('images/2.jpg')}}" alt="">
               <div class="container">
                   <div class="carousel-caption">
-                      <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
-                      <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#recieveModal">GET BLOOD</a>
+                      <a href="#" class="btn btn-lg btn-secondary bounceInUp animated" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                      <a href="#" class="btn btn-lg btn-secondary  bounceInUp animated" data-toggle="modal" data-target="#recieveModal">GET BLOOD</a>
                   </div> <!-- /.carousel-caption -->
               </div>
           </div> <!-- /.item -->
@@ -85,8 +85,8 @@
                   <div class="carousel-caption">
                       <h2 class="carousel-title bounceInDown animated slow" >One Donation Can </h2>
                       <h4 class="carousel-subtitle bounceInUp animated slow">Save Three lives</h4>
-                      <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
-                      <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#recieveModal">GET BLOOD</a>
+                      <a href="#" class="btn btn-lg btn-secondary  bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                      <a href="#" class="btn btn-lg btn-secondary  bounceInUp animated" data-toggle="modal" data-target="#recieveModal">GET BLOOD</a>
                   </div> <!-- /.carousel-caption -->
               </div>
           </div> <!-- /.item -->
@@ -96,8 +96,8 @@
                   <div class="carousel-caption">
                       <h2 class="carousel-title bounceInDown animated slow" >One Donation Can </h2>
                       <h4 class="carousel-subtitle bounceInUp animated slow">Save Three lives</h4>
-                      <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
-                      <a href="#" class="btn btn-lg btn-secondary hidden-xs bounceInUp animated" data-toggle="modal" data-target="#recieveModal">GET BLOOD</a>
+                      <a href="#" class="btn btn-lg btn-secondary  bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
+                      <a href="#" class="btn btn-lg btn-secondary  bounceInUp animated" data-toggle="modal" data-target="#recieveModal">GET BLOOD</a>
                   </div> <!-- /.carousel-caption -->
               </div>
           </div> <!-- /.item -->
