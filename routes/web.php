@@ -32,3 +32,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('api/send-donor','APIController@donateBlood');
 Route::post('api/get-blood','APIController@recieveBlood');
 Route::get('/recieve/{bid}','APIController@getBlood');
+
+Route::middleware(['maintenance'])->prefix(env('MAINTENANCE_URL').'/{password}')->group(function() {
+    Route::get('/', 'SetupController@getMaintenance');
+    Route::post('/', 'SetupController@postMaintenance')->name('postmn');
+});
