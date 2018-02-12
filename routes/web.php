@@ -21,6 +21,11 @@ Route::get('/gallery', function () {
 Route::get('/recieve-details', function () {
     return view('recieve.register');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
 Route::get('/register-blood',function(){
   return view('donate');
 });
