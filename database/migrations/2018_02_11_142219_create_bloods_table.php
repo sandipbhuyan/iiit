@@ -22,6 +22,7 @@ class CreateBloodsTable extends Migration
             $table->float('wbc',20,0);
             $table->float('patelets',20,0);
             $table->integer('hiv');
+            $table->string('blood_groop');
             $table->integer('place_id')->references('id')->on('places');
             $table->integer('loc_id')->references('id')->on('locations');
             $table->timestamps();

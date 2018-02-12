@@ -19,7 +19,7 @@ class CreateAppointmentsTable extends Migration
             $table->integer('u_id');
             $table->integer('place_id')->references('id')->on('places');
             $table->integer('loc_id')->references('id')->on('locations');
-            $table->float('date');
+            $table->text('appm_time');
             $table->string('reference')->unique();
             $table->timestamps();
         });

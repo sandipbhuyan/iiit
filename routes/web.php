@@ -12,13 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/meet-1', function (){
-   return view('meet1');
-});
+
+Route::post('api/send-donor','APIController@donateBlood');
+Route::post('api/get-blood','APIController@recieveBlood');
