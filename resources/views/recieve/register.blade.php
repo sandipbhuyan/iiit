@@ -54,57 +54,68 @@
         </nav>
   </header> <!-- /. main-header -->
   <div class="container">
+    <form class="form-donation" action="{{url('/api/reciver-register')}}" method="post">
+      {{ csrf_field() }}
+        <h3 class="title-style-1 text-center">Thank you for your donation <span class="title-under"></span>  </h3>
+        <div class="row">
+            <div class="form-group col-md-12 ">
+                <input type="text" class="form-control" id="amount" name="name" placeholder="Name" ng-model="name">
+            </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="email" placeholder="Email*" ng-model="email">
+          </div>
+            <div class="form-group col-md-6 ">
+                <input type="text" class="form-control" name="date" placeholder="Date" id="datepicker" ng-model="date">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="weight" placeholder="Weight(In kg)" ng-model="weight">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="phone" placeholder="Phone" ng-model="phn">
+            </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="age" placeholder="Age" ng-model="age">
+          </div>
+          <div class="form-group col-md-6">
+              <input type="text" class="form-control" name="amount" placeholder="Amount" ng-model="age">
+          </div>
+        </div>
+        <div class="row">
 
-    @foreach($details as $detail)
-    <div class="jumbotron">
-      <h1 class="display-3">Blood Details</h1>
-      <p class="lead">{{ $detail->blood_group }}</p>
-      <hr class="my-4">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Type</th>
-            <th scope="col">Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="table-active">
-            <th scope="row">hymoglobin</th>
-            <td>{{ $detail->hymoglobin }} <b>gm/dl</b></td>
-          </tr>
-          <tr class="table-active">
-            <th scope="row">rbc</th>
-            <td>{{ $detail->rbc }} <b>mg/ml</b></td>
-          </tr>
-          <tr class="table-active">
-            <th scope="row">wbc</th>
-            <td>{{ $detail->wbc }} <b>mg/ml</b></td>
-          </tr>
-          <tr class="table-active">
-            <th scope="row">Patlets</th>
-            <td>{{ $detail->patelets }} <b>mg/ml</b></td>
-          </tr>
-          <tr class="table-active">
-            <th scope="row">hiv</th>
-            <td>
-              @if($detail->hiv == 1)
-                +ve
-              @else
-                -ve
-              @endif
-            </td>
-          </tr>
-          <tr class="table-active">
-            <th scope="row">Group</th>
-            <td>{{ $detail->blood_group }}</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="lead">
-        <a class="btn btn-primary btn-lg" href="{{url('recieve/'.$detail->id)}}" role="button">Get Blood</a>
-      </p>
-    </div>
-    @endforeach
+            <div class="form-group col-md-6">
+                <label for="blood-group">Gender : </label>
+                <select class="selectpicker" name="gender" ng-model="gen">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="blood-group">Blood Group:</label>
+                <select class="selectpicker" name="blood_group" ng-model="bldGrp">
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-primary pull-right" name="donateNow" ng-click="donateBlood()">DONATE NOW</button>
+            </div>
+        </div>
+    </form>
   </div>
 <footer class="main-footer">
 

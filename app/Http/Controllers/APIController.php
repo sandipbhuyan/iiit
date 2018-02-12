@@ -37,7 +37,7 @@ class APIController extends Controller
         $blood->loc_id = 1;
         $blood->save();
 
-        // $ref = $this->createAppointment(1,1,$id,$request->date,"donor");
+        $ref = $this->createAppointment(1,1,$id,$request->date,"donor");
         // $title = "Blood donation Information";
         // $email = $request->email;
         // $content = "this is a blood donation details. Please Reach at Red Cross Blood Bank (Unit 6, Capital Hospital Campus, Bhubaneswar, Odisha 751001) at 10:00 AM IST. Your reference no is :".$ref;
@@ -57,16 +57,16 @@ class APIController extends Controller
         $appointment->place_id = $place;
         $appointment->loc_id = $location;
         $appointment->appm_time = $time;
-        $appointment->reference = "BLOOD-".$user;
+        $appointment->reference = "BLOOD-".$user.$type;
         $appointment->save();
 
-        return "BLOOD-".$user;
+        return "BLOOD-".$user.$type;
      }
 
     public function recieveBlood(Request $request){
         $id = DB::table('recievers')->insertGetId([
             'name' =>  $request->name,
-            'blood_group' => $request->blood_group,
+            'blood_groop' => $request->blood_group,
             'email' => $request->email,
             'phone' => $request->phone,
             'age' => $request->age,
@@ -74,8 +74,8 @@ class APIController extends Controller
             'amount' => $request->amount
         ]);
         //redirect file to set appointment
-        $reference = $this->createAppointment($request->place,$request->location,$id,$request->date,"donor");
-        return $reference;
+        $reference = $this->createAppointment(1,1,$id,$request->date,"reciver");
+        return redirect('/');
     }
 
     public function getPlace(){
@@ -95,9 +95,8 @@ class APIController extends Controller
       return view('recieve.details',['details'=> $details]);
     }
 
-    public function getBlood($id) {
-      $details = Blood::find($id);
-
-      return true;
+    public function getBlood($bid) {
+      $details = Blood::find($bid);
+      return view('recieve.register',['details'=>$details]);
     }
 }

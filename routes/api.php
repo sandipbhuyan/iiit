@@ -22,5 +22,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/get-place','APIController@getPlace');
 Route::get('/get-location/{id}','APIController@getLocation');
 Route::post('/get-blood-details','APIController@getBloodDetails');
-
-Route::get('/recieve-blood/{$b_id}','APIController@');
+Route::post('/reciver-register','APIController@recieveBlood');

@@ -173,18 +173,6 @@
 
         <br>
     </div>
-    <div class="item outer-section">
-        <img src="{{url('images/3.jpg')}}" alt="">
-        <div class="container">
-            <div class="carousel-caption">
-
-                <a href="#" class="btn btn-lg btn-secondary  bounceInUp animated slow" data-toggle="modal" data-target="#donateModal">DONATE NOW</a>
-                <a href="#" class="btn btn-lg btn-secondary bounceInUp animated" data-toggle="modal" data-target="#recieveModal">GET BLOOD</a>
-            </div> <!-- /.carousel-caption -->
-        </div>
-    </div>
-
-
 </div> <!-- /.home-reasons -->
 
 <footer class="main-footer">

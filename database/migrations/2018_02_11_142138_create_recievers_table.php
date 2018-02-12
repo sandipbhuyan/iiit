@@ -20,7 +20,7 @@ class CreateRecieversTable extends Migration
             $table->float('phone',15,0);
             $table->string('email');
             $table->integer('age');
-            $table->integer('amount');
+            $table->float('amount');
             $table->string('gender');
             $table->timestamps();
         });

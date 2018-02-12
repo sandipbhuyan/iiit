@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/gallery', function () {
+    return view('gallery');
+});
 
 Auth::routes();
 
@@ -22,3 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('api/send-donor','APIController@donateBlood');
 Route::post('api/get-blood','APIController@recieveBlood');
+Route::get('/recieve/{bid}','APIController@getBlood');
